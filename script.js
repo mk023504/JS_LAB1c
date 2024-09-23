@@ -1,36 +1,30 @@
-// 1:
+//  1:
 
-const marks = [85, 97, 44, 37, 76, 60];
+const arr = [1, 2, 3, 4, 5];
 
-// Calculate average
-const average = marks.reduce((sum, mark) => sum + mark, 0) / marks.length;
+// Reverse the array
+arr.reverse();
 
-console.log(average); 
+// Add 0 to the end
+arr.push(0);
 
-//2:
+console.log(arr); // [6, 5, 4, 3, 2, 1, 0]
 
-const prices = [250, 645, 300, 900, 50];
 
-// Apply 10% discount
-const discountedPrices = prices.map(price => price * 0.9);
+//  2:
 
-console.log(discountedPrices); // Output
+const arr1 = [1, 2, 3, 4, 5];
+const arr2 = [5, 6, 7, 8, 9, 10];
 
-//3:
 
-let companies = ["Bloomberg", "Microsoft", "Uber", "Google", "IBM", "Netflix"];
+const arr3 = arr1.slice(0, 4).concat(arr2);
 
-// a. RemoveS the first company
-companies.shift(); 
+console.log(arr3); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-// b. Remove "Uber" & Add "Ola" in its place
-const uberIndex = companies.indexOf("Uber");
-if (uberIndex !== -1) {
-    companies.splice(uberIndex, 1, "Ola"); // Replace "Uber" with "Ola"
-}
+//
+const arr4 = [...arr1, ...arr2];
+arr4.splice(4, 1);
 
-// c. Add "Amazon" at the end
-companies.push("Amazon");
+console.log(arr4); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
 
-console.log(companies); // Output
 
