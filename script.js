@@ -1,30 +1,43 @@
-//  1:
+const library = [
+    {
+        title: "The Art of the Start 2.0",
+        author: "Guy Kawasak",
+        status: {
+            own: true,
+            reading: false,
+            read: false
+        }
+    },
+    {
+        title: "The Story of Success",
+        author: "Malcolm Gladwell",
+        status: {
+            own: true,
+            reading: false,
+            read: false
+        }
+    },
+    {
+        title: "Stephen R. Covey ",
+        author: "The 7 Habits of Highly Effective People",
+        status: {
+            own: true,
+            reading: false,
+            read: false
+        }
+    }
+];
 
-const arr = [1, 2, 3, 4, 5];
+//  2: Set all read values to true
+library.forEach(book => {
+    book.status.read = true;
+});
 
-// Reverse the array
-arr.reverse();
+//  3:
+const { title: firstBook } = library[0];
 
-// Add 0 to the end
-arr.push(0);
+//  4: Turn the library object into a JSON string
+const libraryJSON = JSON.stringify(library);
 
-console.log(arr); // [6, 5, 4, 3, 2, 1, 0]
-
-
-//  2:
-
-const arr1 = [1, 2, 3, 4, 5];
-const arr2 = [5, 6, 7, 8, 9, 10];
-
-
-const arr3 = arr1.slice(0, 4).concat(arr2);
-
-console.log(arr3); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-//
-const arr4 = [...arr1, ...arr2];
-arr4.splice(4, 1);
-
-console.log(arr4); // [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
-
-
+console.log(firstBook); // "The Art of the Start 2.0"
+console.log(libraryJSON); 
